@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #055a05; /* forest green */
-    --secondary-color: #f4a261; /* warm sand */
-    --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /* light golden yellow */
-    --heading-font: "Merriweather Sans", sans-serif; /* heading font */
-    --body-font: "Lato", sans-serif; /* body font */
+    --primary-color: #055a05;       /* forest green */
+    --secondary-color: #f4a261;     /* warm sand */
+    --accent1-color: #264653;       /* dark slate blue */
+    --accent2-color: #e9c46a;       /* light golden yellow */
+    --heading-font: "Merriweather Sans", sans-serif;
+    --body-font: "Lato", sans-serif;
+    --text-color: #333;
+    --background-light: #ffffff;
 }
 
 * {
@@ -15,12 +17,33 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--text-color);
+    background-color: var(--background-light);
+    line-height: 1.6;
 }
 
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-height: 60px;
+}
+
+header nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 header, main, footer {
@@ -32,25 +55,24 @@ header, main, footer {
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 nav, p, section, article {
-    margin: 16px;
+    margin: 16px 0;
     padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
 }
 
 .hero {
     position: relative;
+    margin: 16px 0;
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .hero h1 {
@@ -59,22 +81,60 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff; /* white text – make sure there is enough contrast */
+    background-color: rgba(38, 70, 83, 0.8); /* accent1-color with opacity */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .hero article {
     position: absolute;
-    top: 60px;
+    bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     border-radius: 8px;
-    max-width: 300px;
+    max-width: 320px;
+    font-size: 0.95rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid var(--accent2-color);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
 }
