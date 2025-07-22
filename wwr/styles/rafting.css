@@ -16,12 +16,22 @@
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: var(--body-font), sans-serif;
     color: var(--text-color);
     background-color: var(--background-light);
     line-height: 1.6;
 }
 
+/* Layout Containers */
+header,
+main,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header Styles */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
@@ -29,6 +39,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header img {
@@ -46,23 +57,24 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-header, main, footer {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-h1, h2 {
-    font-family: var(--heading-font);
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font), sans-serif;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-nav, p, section, article {
+/* Global Elements */
+nav,
+p,
+section,
+article {
     margin: 16px 0;
     padding: 8px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     margin: 16px 0;
@@ -106,6 +118,7 @@ nav, p, section, article {
     border-radius: 4px;
 }
 
+/* Section Images */
 section img {
     width: 100%;
     max-width: 100%;
@@ -128,9 +141,18 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+/* Social Media Links */
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
 .socialmedia a {
     text-decoration: none;
-    margin: 0 8px;
 }
 
 .socialmedia img {
