@@ -22,16 +22,14 @@ body {
     line-height: 1.6;
 }
 
-/* Layout Containers */
-header,
-main,
-footer {
+/* Layout */
+header, main, footer {
     max-width: 840px;
     margin: 0 auto;
     padding: 0 16px;
 }
 
-/* Header Styles */
+/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
@@ -58,18 +56,14 @@ header nav a:hover {
 }
 
 /* Headings */
-h1,
-h2 {
+h1, h2 {
     font-family: var(--heading-font), sans-serif;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-/* Global Elements */
-nav,
-p,
-section,
-article {
+/* Common Elements */
+nav, p, section, article {
     margin: 16px 0;
     padding: 8px;
 }
@@ -103,7 +97,7 @@ article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 16px;
     border-radius: 8px;
     max-width: 320px;
@@ -111,6 +105,7 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Floating image inside hero article */
 .hero article img {
     float: right;
     width: 125px;
@@ -127,7 +122,7 @@ section img {
     border-radius: 4px;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -141,7 +136,7 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
-/* Social Media Links */
+/* Social Media */
 .socialmedia {
     display: flex;
     justify-content: center;
