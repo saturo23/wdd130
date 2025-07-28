@@ -1,4 +1,4 @@
-/* COLOR & FONT VARIABLES  */
+/* COLOR & FONT VARIABLES  */j/* Root variables for theme colors and fonts */
 :root {
   --primary-color: #004e89;
   --secondary-color: #4db8ff;
@@ -9,7 +9,7 @@
   --body-font: 'Lato', sans-serif;
 }
 
-
+/* Reset & Base Layout */
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +23,13 @@ body {
   line-height: 1.6;
 }
 
+/* Container sizing */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-
+/* Header with CSS Grid */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
@@ -43,7 +44,7 @@ header img {
   width: 120px;
 }
 
-
+/* Navigation styled using Flex */
 header nav {
   display: flex;
   justify-content: flex-end;
@@ -60,7 +61,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* TYPOGRAPHY */
+/* Typography styles */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -71,7 +72,7 @@ nav, p, section, article {
   padding: 8px;
 }
 
-
+/* HERO section with relative/absolute layout */
 .hero {
   position: relative;
 }
@@ -115,7 +116,7 @@ nav, p, section, article {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Section image formatting */
 section img {
   width: 150px;
   margin: 8px;
@@ -131,8 +132,10 @@ section h2 {
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 4px;
   margin-bottom: 12px;
+  text-align: center; /* Centered History & Adventure headings */
 }
 
+/* History layout with flexbox */
 .history-layout {
   display: flex;
   gap: 20px;
@@ -150,6 +153,7 @@ section h2 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Adventure gallery section */
 .gallery {
   display: flex;
   justify-content: space-between;
@@ -173,7 +177,7 @@ figcaption {
   color: #222;
 }
 
-
+/* Footer with social media and flex alignment */
 footer {
   background-color: var(--primary-color);
   color: var(--accent1-color);
