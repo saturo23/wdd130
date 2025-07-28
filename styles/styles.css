@@ -1,55 +1,85 @@
-*{
+/* Reset and base layout */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* CSS variables for reuse */
 :root {
   --primary-color: darkblue;
   --light-text: white;
   --border-color: black;
 }
 
+/* Limit the width of header, footer, and grid container */
+header, .grid, footer {
+  max-width: 840px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Navigation bar setup using Flexbox */
 nav {
-  background-color: darkblue;
-  padding: 10px;
+  background-color: var(--primary-color);
+  padding: 1rem;
+
+  display: flex; /* Layout nav items in a row */
+  justify-content: space-evenly; /* Even spacing between links */
+  align-items: center; /* Vertically center */
 }
 
+/* Style individual nav links */
 nav a {
-  color: white;
-  display: block;
-  padding: 20px;
+  color: var(--light-text);
+  display: block; /* Make clickable area larger */
+  padding: 0.5rem;
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-main{
-  width: 640px;
+/* Main layout area */
+main {
+  max-width: 100%;
 }
 
+/* Style profile image inside main */
 main img {
   width: 150px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   padding: 2px;
   box-shadow: 0 0 30px gray;
   float: right;
   margin: 0 0 1rem 1rem;
 }
 
+/* Add border under main heading */
+main h1 {
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin: 1rem;
+}
+
+/* Paragraph spacing */
 p {
   margin: 1rem;
 }
 
-main {
-  width: 840px;
-  max-width: 100%;
+/* Grid container for layout of aside + main */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* aside (1), main (2) */
+  gap: 1rem; /* spacing between columns */
 }
 
+/* Aside styles (left side of grid) */
 aside {
-  width: 20rem;
   margin: 1rem;
   padding: 1rem;
   background-color: #eee;
@@ -57,26 +87,31 @@ aside {
   color: #333;
   text-align: center;
   position: relative;
+
+  grid-row: 1; /* Ensures it stays in row 1 if needed */
 }
 
+/* Image inside aside */
 aside img {
   width: 200px;
   height: auto;
 }
 
+/* Position city heading */
 aside h2 {
   position: absolute;
   top: 6px;
   left: 160px;
-
 }
 
+/* Footer style */
 footer {
   margin-top: 15px;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--border-color);
   text-align: center;
 }
-/* Class Selectors */
+
+/* Class utility styles */
 .box {
   margin: 1rem;
   border: 1px solid rgba(0, 0, 0, 1);
@@ -84,6 +119,8 @@ footer {
   background-color: #eee;
   color: #000;
 }
+
+/* Used for indenting list items */
 .indent {
   padding-left: 2rem;
 }
