@@ -61,6 +61,7 @@ nav a {
   font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   text-align: center;
@@ -127,6 +128,7 @@ nav a {
   border-radius: 6px;
 }
 
+/* Footer */
 footer {
   display: flex;
   justify-content: space-between;
@@ -154,4 +156,105 @@ footer nav img {
   .hero article {
     flex-direction: column;
   }
+}
+
+/* TRIP DESCRIPTIONS SECTION */
+.trip-descriptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.trip {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.trip img {
+  width: 100%;
+  height: auto;
+}
+
+.trip div {
+  padding: 1rem;
+}
+
+/* TRIP TABLE */
+.trip-table {
+  padding: 2rem;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.trip-table th,
+.trip-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.trip-table th {
+  background-color: var(--accent1-color);
+  color: white;
+}
+
+/* CTA STYLING */
+.cta {
+  background: var(--primary-color);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--accent2-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+  background-color: var(--accent1-color);
+}
+
+/* Active Nav Link */
+nav a.active {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Content Wrapper (for consistent layout) */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Hero Section (optional for trips page) */
+.hero {
+  background: url('../images/trips-hero.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
